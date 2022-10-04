@@ -1,0 +1,450 @@
+.burger,
+.lotsSection .lotsMobile,
+.mob,
+.mobileMap,
+.mobileRent {
+    display: none
+}
+
+
+body {
+  background-image: url(../img/dynamic.png);
+  background-size: cover;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Akrobat", sans-serif;
+}
+
+#navbar {
+  z-index: 999;
+  position: fixed;
+  position: top;
+  top: 0;
+  width: 100%;
+  padding-bottom: 35px;
+  transition: all 0.1s;
+}
+
+.nav-colored {
+  background-color: rgba(18, 26, 29, 0.8588235294);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.navb-white {
+  background-color: #fff;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.nav-transparent {
+  background-color: transparent;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 46px;
+  justify-content: space-between;
+}
+.navbar__middle {
+  font-size: 19px;
+  max-width: 702px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__middle-link {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar__middle .activeLink {
+  border-bottom: 1px solid #fff;
+}
+.navbar__middle-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s;
+  margin-top: 3px;
+}
+.navbar__middle-link:hover::after {
+  width: 100%;
+}
+.navbar__right a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-family: "Akrobat Bold", sans-serif;
+  letter-spacing: 2px;
+}
+
+.main {
+  color: #fff;
+  padding-top: 208px;
+}
+.main .text {
+  display: flex;
+  justify-content: space-between;
+}
+.main .text__left {
+  font-size: 74px;
+  font-weight: 800;
+  line-height: 88.8px;
+  max-width: 523px;
+  width: 100%;
+}
+.main .text__right {
+  max-width: 603px;
+  width: 100%;
+}
+.main .text__right-card .date {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+.main .text__right-card .date__date {
+  font-size: 23px;
+  font-weight: bold;
+  font-family: "Akrobat SemiBold", sans-serif;
+}
+.main .text__right-card .date__photo {
+  font-size: 23px;
+}
+.main .text__right-card .infoText {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Akrobat", sans-serif;
+  padding-right: 70px;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 28px;
+}
+.main .text__right-card .infoText img {
+  margin-top: 12px;
+  padding-right: 10px;
+}
+.main .text__right-card .image {
+  max-width: 603px;
+  width: 100%;
+  background-image: url(../img/dynamic_image.png);
+  height: 397px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.main .text__right-card .image button {
+  font-size: 18px;
+  color: #FFFFFF;
+  background: unset;
+  border: 1px solid #FFFFFF;
+  padding: 22px 60px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.main .text__right-card .image button:hover {
+  color: rgb(51, 51, 51);
+  background-color: #FFFFFF;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 54px;
+}
+.footer__left {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.footer__right-link {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.side_menu {
+  display: none;
+}
+
+@media(max-width:767px) {
+
+    #navbar {
+      position: static;
+    }
+
+    .nav-colored {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none
+    }
+
+    .side_menu {
+        display: none;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/mob_menu.png');
+        z-index: 3;
+    }
+
+    .menu_cont {
+        padding: 40px 30px;
+    }
+
+    .side_menu.active {
+        display: flex
+    }
+
+    .side_menu .navbar__middle-link {
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        margin-bottom: 26px;
+        display: block
+    }
+
+    .side_menu .navbar__middle-link.activeLink {
+        color: #C49B6C;
+    }
+
+    .container {
+        max-width: 540px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+
+    .left_veritcal_block,
+    .lotsSection .lots .lotBckg,
+    .navbar__middle,
+    .navbar__right {
+        display: none
+    }
+
+    .mobileRight .mob {
+        display: block
+    }
+
+    .menu_toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 17px
+    }
+
+    .menu-btn {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: 0 0;
+        border-radius: 50%;
+        position: relative
+    }
+
+    .menu-btn span,
+    .menu-btn span::after,
+    .menu-btn span::before {
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -12px;
+        width: 24px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #fff
+    }
+
+    .menu-btn span::after,
+    .menu-btn span::before {
+        content: '';
+        display: block;
+        transition: .2s
+    }
+
+    .menu-btn span::before {
+        transform: translateY(-8px)
+    }
+
+    .menu-btn span::after {
+        transform: translateY(6px)
+    }
+
+    .menu-btn.menu-btn_active span {
+      background: transparent;
+    }
+
+    .menu-btn.menu-btn_active span::before {
+        transform: rotate(45deg);
+    }
+
+    .menu-btn.menu-btn_active span::after {
+        transform: rotate(-45deg);
+    }
+
+    .main__title:before {
+      display: none
+    }
+
+    .left_subtitle_cont {
+        flex-direction: column;
+    }
+
+    .aboutDeveloper__left-subtitl {
+        font-size: 24px;
+        line-height: 28px
+    }
+
+    .foot_consult {
+        margin: 30px 0 0;
+        padding: 15px;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start
+    }
+
+    .foot_consult_item_2 {
+        position: static;
+    }
+
+    .copyright_block {
+        flex-direction: column-reverse;
+    }
+
+    .foot_consult_item img {
+        margin: 10px 0
+    }
+
+    .main {
+        padding-top: 40px
+    }
+
+    .aboutDeveloper__left-title,
+    .carousel__left-title,
+    .charTitle,
+    .location__title,
+    .lotsSection .lots__title,
+    .main__title,
+    .premium__title,
+    .slider__top-left .sliderTitle {
+        font-size: 30px;
+        line-height: 36px
+    }
+
+    .location__subtitle,
+    .premium__subtitle {
+        line-height: 28px;
+        font-size: 20px
+    }
+
+    .main__title {
+        margin: 0 0 12px;
+    }   
+
+    .aboutDeveloper__left {
+        padding: 0;
+        width: 100%
+    }
+
+    .aboutDeveloper__left .footerDownload,
+    .aboutDeveloper__left img,
+    .aboutDeveloper__left-subtitle button {
+        margin: 30px 0
+    }
+
+    .aboutDeveloper__left-title {
+        margin-bottom: 15px
+    }
+
+    .aboutDeveloper__left-subtitle {
+        padding: 0 0 30px
+    }
+
+    .aboutDeveloper {
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+        margin-top: 40px
+    }
+
+    .aboutDeveloper__right .right_block {
+        padding: 0;
+        margin: 30px 0
+    }
+
+    .aboutDeveloper__left .left_block>img,
+    .aboutDeveloper__right {
+        display: none
+    }
+
+    .aboutDeveloper__left-contacts {
+        flex-direction: column-reverse
+    }
+
+    .aboutDeveloper__left .footerDownload img {
+        margin-top: 0
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+    }
+    .main__subtitle {
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 29px;
+      margin: 22px 0 46px
+    }
+    .main .text {
+      flex-direction: column;
+    }
+    .main .text__left {
+      font-size: 30px;
+      line-height: 36px;
+      padding: 5px 0 50px
+    }
+    .main .text__right {
+      max-width: 100%;
+      padding-top: 40px;
+      padding-bottom: 0
+    }
+    .main .text__right-card .image {
+      margin-bottom: 40px
+    }
+    .main .text__right-card .infoText {
+      padding: 0
+    }
+    .infoText p {
+      font-size: 18px;
+      line-height: 26px;
+      padding: 15px 0 30px 0
+    }
+    .footer {
+      flex-direction: column;
+    }
+    .footer__left {
+      margin-bottom: 10px
+    }
+	.sliderSection {
+      background: #414650;
+      overflow: hidden;  
+      background-position: center;
+    }
+}

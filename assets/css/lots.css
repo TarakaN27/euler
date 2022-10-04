@@ -1,0 +1,905 @@
+.burger,
+.lotsSection .lotsMobile,
+.mob,
+.mobileMap,
+.mobileRent {
+    display: none
+}
+
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Akrobat", sans-serif;
+}
+
+.hero {
+  background-image: url(../img/lots_bckg.png);
+  background-size: cover;
+}
+
+#navbar {
+  z-index: 999;
+  position: fixed;
+  position: top;
+  top: 0;
+  width: 100%;
+  padding-bottom: 35px;
+  transition: all 0.1s;
+}
+
+.nav-colored {
+  background-color: rgba(18, 26, 29, 0.8588235294);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.navb-white {
+  background-color: #fff;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.nav-transparent {
+  background-color: transparent;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 46px;
+  justify-content: space-between;
+}
+.navbar__middle {
+  font-size: 19px;
+  max-width: 702px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__middle-link {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar__middle .activeLink {
+  border-bottom: 1px solid #fff;
+}
+.navbar__middle-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s;
+  margin-top: 3px;
+}
+.navbar__middle-link:hover::after {
+  width: 100%;
+}
+.navbar__right a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-family: "Akrobat Bold", sans-serif;
+  letter-spacing: 2px;
+}
+
+.main {
+  padding-bottom: 120px;
+}
+.main__top {
+  font-size: 74px;
+  width: 100%;
+  color: #FFFFFF;
+  line-height: 88.8px;
+  font-family: "Akrobat Bold", sans-serif;
+  padding-top: 208px;
+  font-weight: 800;
+}
+.main__bottom {
+  display: flex;
+}
+.main__bottom-left {
+  margin-right: 31px;
+}
+.main__bottom-left .floorTxt {
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 24px;
+  font-family: "Akrobat SemiBold", sans-serif;
+  padding-top: 64px;
+  padding-bottom: 24px;
+}
+.main__bottom-left .floor .floorsBtn {
+  display: flex;
+  align-items: center;
+}
+.main__bottom-left .floor .floorsBtn button {
+  font-size: 20px;
+  color: #FFFFFF;
+  border-radius: 50%;
+  background-color: unset;
+  height: 33px;
+  width: 33px;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+  margin-right: 9px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.main__bottom-left .floor .floorsBtn button.active {
+  background: #C49B6C;
+  border-color: #C49B6C;
+}
+.main__bottom-left .price {
+  padding-top: 18px;
+}
+.main__bottom-left .price .line {
+  display: flex;
+  align-items: center;
+}
+.main__bottom-left .price .line .btnTxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+}
+.main__bottom-left .price .line .btnTxt .spanBtn {
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+.main__bottom-left .price .line .btnTxt .priceBtn {
+  background: unset;
+  border: unset;
+}
+.main__bottom-center .area .areaTxt {
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 24px;
+  font-family: "Akrobat SemiBold", sans-serif;
+  padding-top: 64px;
+  padding-bottom: 24px;
+}
+.main__bottom-center .area .line {
+  display: flex;
+  align-items: center;
+}
+.main__bottom-center .area .line .btnTxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+}
+.main__bottom-center .area .line .btnTxt .spanBtn {
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+.main__bottom-center .area .line .btnTxt .priceBtn {
+  background: unset;
+  border: unset;
+}
+.main__bottom-center .lotsPrice {
+  padding-top: 30px;
+}
+.main__bottom-center .lotsPrice .lotsTxt {
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 24px;
+  font-family: "Akrobat SemiBold", sans-serif;
+  padding-bottom: 24px;
+}
+.main__bottom-center .lotsPrice .line {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.main__bottom-center .lotsPrice .line .btnTxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+}
+.main__bottom-center .lotsPrice .line .btnTxt .spanBtn {
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+.main__bottom-center .lotsPrice .line .btnTxt .priceBtn {
+  background: unset;
+  border: unset;
+}
+.main__bottom-right {
+  margin-left: 35px;
+}
+.main__bottom-right .terrasa .terassatxt {
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 24px;
+  font-family: "Akrobat SemiBold", sans-serif;
+  padding-top: 64px;
+  padding-bottom: 24px;
+}
+.main__bottom-right .terrasa .terrasaBtn {
+  display: flex;
+  align-items: center;
+}
+.main__bottom-right .terrasa .terrasaBtn .cardBtn {
+  font-size: 20px;
+  color: #FFFFFF;
+  border-radius: 50%;
+  background-color: unset;
+  height: 33px;
+  width: 33px;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+  margin-right: 9px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.main__bottom-right .terrasa .terrasaBtn .unicumBtn {
+  font-size: 20px;
+  color: #FFFFFF;
+  border-radius: 47px;
+  border: 1px solid #FFFFFF;
+  background: unset;
+  padding: 10px 36.5px;
+  cursor: pointer;
+}
+.main__bottom-right .terrasa .tarrasaButtons {
+  display: flex;
+  margin-top: 140px;
+  align-items: center;
+}
+.main__bottom-right .terrasa .tarrasaButtons .showBtn {
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 20px 62px;
+  border-radius: 47px;
+  margin-right: 34px;
+  background-color: #414650;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+}
+.main__bottom-right .terrasa .tarrasaButtons .resetBtn {
+  color: #9EA1A6;
+  background: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+.parameters {
+  padding-top: 100px;
+}
+.parameters__top {
+  font-size: 50px;
+  color: #333333;
+  font-family: "Akrobat Bold", sans-serif;
+  font-weight: 800;
+  padding-bottom: 58px;
+}
+.parameters__middle {
+  margin-bottom: 42px;
+}
+.parameters__middle .parameterCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.parameters__middle .parameterCard .checkBox {
+  border-radius: 50%;
+}
+
+#custom-handle, #custom-handle2, #custom-handle3 {
+  width: 33px;
+  height: 33px;
+  top: 50%;
+  margin-top: -16.5px;
+  text-align: center;
+  outline: none;
+  border: none;
+  background: url(../img/btnPic.png);
+  background-size: contain;
+}
+
+#custom-handle .custom_handle_val, #custom-handle2 .custom_handle_val, #custom-handle3 .custom_handle_val {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  top: -25px;
+}
+
+.slider_cont {
+  margin: 45px 0;
+  min-width: 410px;
+}
+
+.ui-widget.ui-widget-content {
+  border: none;
+  height: 3px;
+  background: #D9D9D9;
+  border-radius: 20px;
+}
+
+.progress_line {
+  height: 3px;
+  top: 0;
+  background: #C49B6C;
+  border-radius: 20px;
+}
+
+.checkbox_cont input {
+  display: none;
+}
+
+.checkbox_cont label {
+  width: 44px;
+  height: 44px;
+  border: 0.857143px solid #BEBEBE;
+  border-radius: 100%;
+  display: block;
+}
+
+.checkbox_cont input:checked + label {
+  background: url(../img/checkgal.png);
+  background-size: contain;
+}
+
+
+.sliderSection {
+  background-image: url(../img/buyback.jpg);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.aboutDeveloper {
+  margin-top: 100px;
+  display: flex;
+  padding-bottom: 50px;
+  position: relative;
+  justify-content: space-between;
+}
+.aboutDeveloper__left {
+  padding-left: 95px;
+  padding-top: 70px;
+  padding-right: 50px;
+}
+.aboutDeveloper__left-subtitle button {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  background: none;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 22px 75px;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: all 0.3s;
+  margin-bottom: 45px;
+  display: block;
+  margin-top: 50px;
+}
+.aboutDeveloper__left img {
+  margin-bottom: 70px;
+}
+.aboutDeveloper__left-title {
+  color: rgb(255, 255, 255);
+  font-family: "Akrobat Bold", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 74px;
+  line-height: 89px;
+  letter-spacing: 0.03em;
+  margin-bottom: 40px;
+}
+.aboutDeveloper__left-subtitle {
+  font-size: 23px;
+  color: rgb(255, 255, 255);
+  padding-bottom: 50px;
+  padding-right: 150px;
+}
+.aboutDeveloper__left-contacts {
+  display: flex;
+  align-items: stretch;
+}
+.aboutDeveloper__left-contacts .left_block {
+  display: flex;
+  flex-direction: column;
+}
+.aboutDeveloper__left-contacts a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.aboutDeveloper__left-contacts .phone {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.aboutDeveloper__left-contacts .location {
+  padding-bottom: 15px;
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.aboutDeveloper__right .right_block {
+  display: flex;
+  flex-direction: column;
+}
+.aboutDeveloper__right .right_block a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #414650;
+  margin-bottom: 15px;
+  padding: 0!important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Akrobat Bold", sans-serif;
+  text-decoration: none;
+}
+.aboutDeveloper__right .right_block a img {
+  margin: 0 9px 0 0;
+}
+.aboutDeveloper__right .right_block .phone {
+  margin-bottom: 95px;
+}
+.aboutDeveloper__right .right_block a.policy {
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  color: #414650;
+}
+.aboutDeveloper__left .footerDownload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 80px;
+}
+.aboutDeveloper__left .footerDownload img {
+  margin-bottom: 0;
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+}
+.aboutDeveloper__left .footerDownload a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+}
+.aboutDeveloper__left .footerDownload a span {
+  border-bottom: 1px solid #fff;
+}
+.aboutDeveloper__left .policy {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  color: #fff;
+}
+.aboutDeveloper__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.aboutDeveloper__right img {
+  margin-bottom: 160px;
+}
+
+.aboutDeveloper__right .logodev {
+  width: 225px;
+}
+
+.copyright {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  color: #BBBBBB;
+}
+
+.aboutDeveloper__left-subtitl {
+  font-size: 35px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  font-family: "Akrobat Bold", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.left_subtitle_cont {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+.left_subtitle_cont > img {
+  margin-bottom: 0;
+  margin-left: 95px;
+}
+
+.aboutDeveloper__left-subtitl_small {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.foot_consult {
+  padding: 28px 26px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 60px;
+}
+
+.foot_consult_item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.foot_consult_item_2 {
+  position: relative;
+  left: 20px;
+}
+
+.foot_consult_item img {
+  margin-bottom: 30px;
+}
+
+.foot_consult_item_2 img {
+  margin-bottom: 13px;
+}
+
+.foot_consult_item span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #BBBBBB;
+  max-width: 180px;
+}
+
+.copyright_block {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+
+.side_menu {
+  display: none;
+}
+
+@media(max-width:767px) {
+
+    #navbar {
+      position: static;
+      padding-bottom: 180px
+    }
+
+    .nav-colored {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none
+    }
+
+    .side_menu {
+        display: none;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/mob_menu.png');
+        z-index: 3;
+    }
+
+    .menu_cont {
+        padding: 40px 30px;
+    }
+
+    .side_menu.active {
+        display: flex
+    }
+
+    .side_menu .navbar__middle-link {
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        margin-bottom: 26px;
+        display: block
+    }
+
+    .side_menu .navbar__middle-link.activeLink {
+        color: #C49B6C;
+    }
+
+    .container {
+        max-width: 540px;
+        padding-right: 25px;
+        padding-left: 25px
+    }
+
+    .left_veritcal_block,
+    .lotsSection .lots .lotBckg,
+    .navbar__middle,
+    .navbar__right {
+        display: none
+    }
+
+    .mobileRight .mob {
+        display: block
+    }
+
+    .menu_toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 17px
+    }
+
+    .menu-btn {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: 0 0;
+        border-radius: 50%;
+        position: relative
+    }
+
+    .menu-btn span,
+    .menu-btn span::after,
+    .menu-btn span::before {
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -12px;
+        width: 24px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #fff
+    }
+
+    .menu-btn span::after,
+    .menu-btn span::before {
+        content: '';
+        display: block;
+        transition: .2s
+    }
+
+    .menu-btn span::before {
+        transform: translateY(-8px)
+    }
+
+    .menu-btn span::after {
+        transform: translateY(6px)
+    }
+
+    .menu-btn.menu-btn_active span {
+      background: transparent;
+    }
+
+    .menu-btn.menu-btn_active span::before {
+        transform: rotate(45deg);
+    }
+
+    .menu-btn.menu-btn_active span::after {
+        transform: rotate(-45deg);
+    }
+
+    .main__title:before {
+      display: none
+    }
+
+    .left_subtitle_cont {
+        flex-direction: column;
+    }
+
+    .aboutDeveloper__left-subtitl {
+        font-size: 24px;
+        line-height: 28px
+    }
+
+    .foot_consult {
+        margin: 30px 0 0;
+        padding: 15px;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start
+    }
+
+    .foot_consult_item_2 {
+        position: static;
+    }
+
+    .copyright_block {
+        flex-direction: column-reverse;
+    }
+
+    .foot_consult_item img {
+        margin: 10px 0
+    }
+
+    .main {
+        padding-top: 40px;
+        background: #414650;
+    }
+
+    .hero {
+      background-image: url('../img/lots_bac1.png');
+      background-size: contain;
+    }
+
+    .aboutDeveloper__left-title,
+    .carousel__left-title,
+    .charTitle,
+    .location__title,
+    .lotsSection .lots__title,
+    .main__title,
+    .premium__title,
+    .slider__top-left .sliderTitle {
+        font-size: 30px;
+        line-height: 36px
+    }
+
+    .location__subtitle,
+    .premium__subtitle {
+        line-height: 28px;
+        font-size: 20px
+    }
+
+    .main__title {
+        margin: 0 0 12px;
+    }   
+
+    .aboutDeveloper__left {
+        padding: 0;
+        width: 100%
+    }
+
+    .aboutDeveloper__left .footerDownload,
+    .aboutDeveloper__left img,
+    .aboutDeveloper__left-subtitle button {
+        margin: 30px 0
+    }
+
+    .aboutDeveloper__left-title {
+        margin-bottom: 15px
+    }
+
+    .aboutDeveloper__left-subtitle {
+        padding: 0 0 30px
+    }
+
+    .aboutDeveloper {
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+        margin-top: 40px
+    }
+
+    .aboutDeveloper__right .right_block {
+        padding: 0;
+        margin: 30px 0
+    }
+
+    .aboutDeveloper__left .left_block>img,
+    .aboutDeveloper__right {
+        display: none
+    }
+
+    .aboutDeveloper__left-contacts {
+        flex-direction: column-reverse
+    }
+
+    .aboutDeveloper__left .footerDownload img {
+        margin-top: 0
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 60px
+    }
+    .main__subtitle {
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 29px;
+      margin: 22px 0 46px
+    }
+    .main__top {
+      padding-top: 0;
+      font-size: 30px;
+      line-height: 36px;
+      margin-top: -160px;
+      margin-bottom: 60px
+    }
+    .main__bottom {
+      flex-direction: column;
+    }
+    .main__bottom-left .floorTxt, .main__bottom-center .area .areaTxt, .main__bottom-right .terrasa .terassatxt {
+      padding-top: 25px
+    }
+    .main__bottom-right {
+      margin: 0
+    }
+    .slider_cont {
+      margin-bottom: 0
+    }
+    .main__bottom-right .terrasa .tarrasaButtons {
+      margin-top: 30px
+    }
+    .parameters {
+      padding-top: 50px;
+      padding-bottom: 50px
+    }
+    .parameters__top {
+      font-size: 30px;
+      line-height: 36px;
+      padding-bottom: 40px
+    }
+    .main__bottom-left {
+      margin: 0
+    }
+    .slider_cont {
+      min-width: 100%;
+    }
+    .parameterCard__img {
+      width: 128px;
+      position: absolute;
+      left: 0
+    }
+    .parameters__middle .parameterCard {
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+    .checkbox_cont {
+      right: 0;
+      position: absolute;
+    }
+    .parameters__middle .parameterCard > p {
+      margin-left: 150px;
+      margin-bottom: 9px
+    }
+	.sliderSection {
+      background: #414650;
+      overflow: hidden;  
+      background-position: center;
+    }
+	
+	
+}

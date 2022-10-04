@@ -1,0 +1,403 @@
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Akrobat', sans-serif;
+}
+.hero{
+    background-image: url(../img/lots_bckg.png);
+    background-size: cover;
+}
+#navbar{
+    z-index: 999;
+    position: fixed;
+    position: top;
+    top: 0;
+    width: 100%;
+    padding-bottom: 35px;
+    // background-color: #4F5563;
+    transition: all .1s;
+}
+.nav-colored{
+    background-color: #121a1ddb;
+    backdrop-filter: blur(10px);
+}
+.navb-white{
+    background-color: #fff;
+    backdrop-filter: blur(10px);
+}
+.nav-transparent{
+    background-color: transparent;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding-top: 46px;
+    justify-content: space-between;
+
+    &__middle{
+        font-size: 19px;
+        max-width: 702px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      
+        &-link{
+            text-decoration: none;
+            color: #fff;
+
+         
+        }
+        .activeLink{
+            border-bottom: 1px solid #fff;
+            margin-top: 3px;
+        }
+        &-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: #fff;
+            transition: width .3s;
+
+           margin-top: 3px;
+        }
+        &-link:hover::after {
+            width: 100%;
+            //transition: width .3s;
+        }
+    }
+    &__right{
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 30px;
+            font-family: 'Akrobat Bold', sans-serif;
+            letter-spacing: 2px;
+        }
+    }
+}
+.main{
+    // font-size: 74px;
+   
+    // font-family: 'Akrobat ExtraBold', sans-serif;
+    // font-weight: bold;
+    // color: #fff;
+    // // margin-top: 355px;
+    // padding-top: 460px;
+    padding-bottom: 120px;
+    &__top{
+        font-size: 74px;
+        max-width: 547px;
+        width: 100%;
+        color: #FFFFFF;
+        line-height: 88.8px;
+        font-family: 'Akrobat Bold', sans-serif;
+        padding-top: 208px;
+        font-weight: 800;
+    }
+    &__bottom{
+        display: flex;
+        margin-left: -35px;
+        &-left{
+            margin-right: 31px;
+            .floorTxt{
+                font-size: 20px;
+                color: #FFFFFF;
+                line-height: 24px;
+                font-family: 'Akrobat SemiBold', sans-serif;
+                padding-top: 64px;
+                padding-bottom: 24px;
+            }
+            .floor{
+                .floorsBtn{
+                    display: flex;
+                    align-items: center;
+                    button{
+                        font-size: 20px;
+                        color: #FFFFFF;
+                        border-radius: 50%;
+                        background-color: unset;
+                        height: 33px;
+                        width: 33px;
+                        border: 1px solid #FFFFFF;
+                        cursor: pointer;
+                        margin-right: 9px;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                       
+                    }
+                }
+            }
+            .price{
+                padding-top: 30px;
+                .line{
+                    display: flex;
+                    align-items: center;
+                   
+                    .btnTxt{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        color: #FFFFFF;
+                       .spanBtn{
+                        margin-bottom: 6px;
+                        margin-top: 6px;
+                       }
+                        .priceBtn{
+                            background: unset;
+                            border: unset;
+                        }
+                    }
+                }
+            }
+        }
+        &-center{
+            .area{
+             .areaTxt{
+                font-size: 20px;
+                color: #FFFFFF;
+                line-height: 24px;
+                font-family: 'Akrobat SemiBold', sans-serif;
+                padding-top: 64px;
+                padding-bottom: 24px;
+             }
+             .line{
+                display: flex;
+                align-items: center;
+                
+                .btnTxt{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: #FFFFFF;
+                   .spanBtn{
+                    margin-bottom: 6px;
+                    margin-top: 6px;
+                   }
+                    .priceBtn{
+                        background: unset;
+                        border: unset;
+                    }
+                }
+            }
+            }
+
+            .lotsPrice{
+                padding-top: 30px;
+                .lotsTxt{
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    line-height: 24px;
+                    font-family: 'Akrobat SemiBold', sans-serif;
+                    // padding-top: 64px;
+                    padding-bottom: 24px;
+                 }
+                 .line{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 8px;
+                  
+                    .btnTxt{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        color: #FFFFFF;
+                       .spanBtn{
+                        margin-bottom: 6px;
+                        margin-top: 6px;
+                       }
+                        .priceBtn{
+                            background: unset;
+                            border: unset;
+                        }
+                    }
+                }
+            }
+        }
+        &-right{
+            margin-left: 35px;
+            .terrasa{
+                .terassatxt{
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    line-height: 24px;
+                    font-family: 'Akrobat SemiBold', sans-serif;
+                    padding-top: 64px;
+                    padding-bottom: 24px;
+                }
+                .terrasaBtn{
+                    display: flex;
+                    align-items: center;
+                    .cardBtn{
+                        font-size: 20px;
+                        color: #FFFFFF;
+                        border-radius: 50%;
+                        background-color: unset;
+                        height: 33px;
+                        width: 33px;
+                        border: 1px solid #FFFFFF;
+                        cursor: pointer;
+                        margin-right: 9px;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                    }
+                    .unicumBtn{
+                        font-size: 20px;
+                        color: #FFFFFF;
+                        border-radius: 47px;
+                        border: 1px solid #FFFFFF;
+                        background: unset;
+                        padding: 10px 36.5px;
+                        cursor: pointer;
+                    }
+                }
+                .tarrasaButtons{
+                    display: flex;
+                    margin-top: 140px;
+                    align-items: center;
+                    .showBtn{
+                            font-size: 18px;
+                            color: #FFFFFF;
+                            padding: 20px 62px;
+                            border-radius: 47px;
+                            margin-right: 34px;
+                            background-color: #414650;
+                            border: 1px solid #FFFFFF;
+                            cursor: pointer;
+                    }
+                    .resetBtn{
+                        
+                        color: #9EA1A6;
+                        background: unset;
+                        border: unset;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.parameters{
+    padding-top: 100px;
+    &__top{
+        font-size: 50px;
+        color: #333333;
+        font-family: 'Akrobat Bold', sans-serif;
+        font-weight: 800;
+        padding-bottom: 58px;
+    }
+    &__middle{
+        margin-bottom: 42px;
+       .parameterCard{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 24px;
+        .checkBox{
+            border-radius: 50%;
+        }
+       }
+    }
+    &__bottom{
+
+    }
+}
+ 
+  
+
+  
+
+   
+.footer{
+   
+    display: flex;
+    background-image: url(../img/footer.png);
+    background-repeat: no-repeat;
+    padding-bottom: 45px;
+
+        &__info{
+            margin-left: 355px;
+            padding-top: 100px;
+            &-contacts{
+                font-size: 74px;
+                font-weight: 800;
+                font-family: 'Akrobat ExtraBold', sans-serif;
+                line-height: 88.8px;
+                color: rgba(255, 255, 255, 1);
+                padding-bottom: 43px;
+
+            }
+            &-location{
+                color: rgba(255, 255, 255, 1);
+                font-weight: 700;
+                font-family: 'Akrobat', sans-serif;
+                font-size: 23px;
+                line-height: 27.6px;
+                text-decoration: none;
+                
+
+            }
+            &-number{
+                color: rgba(255, 255, 255, 1);
+                font-size: 32.34px;
+                line-height: 39px;
+                font-weight: 700;
+                font-family: 'Akrobat', sans-serif;
+                padding-bottom: 51px;
+                padding: 15px;
+
+            }
+            &-download{
+                display: flex;
+                align-items: center;
+                margin-top: 50px;
+                margin-bottom: 60px;
+                img{
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                }
+                a{
+                    text-decoration: none;
+                    color:  rgba(255, 255, 255, 1);
+                    
+                    span{
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+            &-button{
+                font-size: 18px;
+                color: rgba(255, 255, 255, 1);
+                border: 1px solid rgba(255, 255, 255, 1);
+                padding: 22px 69px;
+                background-color: unset;
+                border-radius: 100px;
+                cursor: pointer;
+                transition: all .3s;
+                margin-bottom: 187px;
+                &:hover{
+                    color: rgba(51, 51, 51, 1);
+                    background-color: rgba(255, 255, 255, 1);
+                }
+            }
+            &-sub{
+                font-size: 16px;
+                color: rgba(255, 255, 255, 1);
+                margin-bottom: 19px;
+              
+            }
+        }
+}

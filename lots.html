@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Выбрать лот</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./assets/css/lots.css" />
+    <link href="http://fonts.cdnfonts.com/css/akrobat" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="hero">
+      <div id="navbar" class="nav-transparent">
+        <div class="navbar container">
+          <div class="mobileLeft">
+            <div class="menu_toggle">
+              <a href="#" class="menu-btn">
+              <span></span>
+              </a>
+            </div>
+          </div>
+          <div class="navbar__left">
+            <a href="http://eiler.testim-site.ru/"><img src="./assets/img/logo.svg" alt="" /></a>
+          </div>
+          <div class="navbar__middle">
+            <a class="navbar__middle-link " href="./about.html">О проекте</a>
+            <a class="navbar__middle-link activeLink" href="./lots.html">Выбрать лот</a>
+            <a class="navbar__middle-link" href="./buy.html">Как купить</a>
+            <a class="navbar__middle-link" href="./investments.html">Инвестиции</a>
+            <a class="navbar__middle-link" href="./gallery.html">Галерея</a>
+            <a class="navbar__middle-link" href="./dynamic.html">Ход строительства</a>
+          </div>
+          <div class="navbar__right">
+            <a href="tel:+74957652626">+7 (495) 765-26-26</a>
+          </div>
+          <a href="tel:+74957652626" class="mobileRight">
+            <img class="mob" src="./assets/img/phone-call.png" alt="" />
+          </a>
+        </div>
+        <div class="side_menu">
+          <div class="navbar container">
+            <div class="mobileLeft">
+              <div class="menu_toggle">
+                <a href="#" class="menu-btn menu-btn_active">
+                <span></span>
+                </a>
+              </div>
+            </div>
+            <div class="navbar__left">
+              <img src="./assets/img/logo.svg" alt="" />
+            </div>
+            <a href="tel:+74957652626" class="mobileRight">
+              <img class="mob" src="./assets/img/phone-call.png" alt="" />
+            </a>
+          </div>
+          <div class="menu_cont">
+            <a class="navbar__middle-link " href="./about.html">О проекте</a>
+            <a class="navbar__middle-link activeLink" href="./lots.html">Выбрать лот</a>
+            <a class="navbar__middle-link" href="./buy.html">Как купить</a>
+            <a class="navbar__middle-link" href="./investments.html">Инвестиции</a>
+            <a class="navbar__middle-link" href="./gallery.html">Галерея</a>
+            <a class="navbar__middle-link" href="./dynamic.html">Ход строительства</a>
+          </div>
+        </div>
+      </div>
+      <div class="main container">
+        <div class="main__top">ПОДБОР ЛОТОВ ПО ПАРАМЕТРАМ</div>
+        <div class="main__bottom">
+          <div class="main__bottom-left">
+            <div class="floor">
+              <p class="floorTxt">ВЫБЕРИТЕ ЭТАЖ</p>
+              <div class="floorsBtn">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+              </div>
+            </div>
+            <div class="price">
+              <p class="floorTxt">ЦЕНА 1М, ТЫС РУБ.</p>
+              <div class="slider_cont">
+                <div id="slider">
+                  <div id="custom-handle" class="ui-slider-handle"><div class="custom_handle_val"></div></div>
+                  <div class="progress_line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__bottom-center">
+            <div class="area">
+              <p class="areaTxt">ПЛОЩАДЬ, М2</p>
+              <div class="slider_cont">
+                <div id="slider2">
+                  <div id="custom-handle2" class="ui-slider-handle"><div class="custom_handle_val"></div></div>
+                  <div class="progress_line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="lotsPrice">
+              <p class="lotsTxt">ЦЕНА ЛОТА, МЛН РУБ.</p>
+              <div class="slider_cont">
+                <div id="slider3">
+                  <div id="custom-handle3" class="ui-slider-handle"><div class="custom_handle_val"></div></div>
+                  <div class="progress_line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__bottom-right">
+            <div class="terrasa">
+              <p class="terassatxt">ВЫБЕРИТЕ ЭТАЖ</p>
+              <div class="terrasaBtn">
+                <button class="unicumBtn">С ТЕРРАСОЙ</button>
+              </div>
+              <div class="tarrasaButtons">
+                <button class="showBtn">ПОКАЗАТЬ ЛОТЫ</button>
+                <button class="resetBtn">
+                  <img src="./assets/img/x.png" alt="" /> СБРОСИТЬ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="parameters container">
+        <div class="parameters__top">НАЙДЕНО 3 ОФИСА ПО ПАРАМЕТРАМ:</div>
+        <div class="parameters__middle">
+          <div class="parameterCard">
+            <img
+              src="./assets/img/parameter.png"
+              alt=""
+              class="parameterCard__img"
+            />
+            <p>4 203</p>
+            <p>4 ЭТАЖ</p>
+            <p>
+              Офисное помещение с <br />
+              террасой
+            </p>
+            <p>
+              Площадь <br />
+              141,75м
+            </p>
+            <p>
+              Терраса <br />
+              276,70
+            </p>
+            <p>77 962 500 Р</p>
+            <div class="checkbox_cont">              
+              <input class="checkBox" type="checkbox" id="checkbox" />
+              <label for="checkbox"></label>
+            </div>
+          </div>
+          <div class="parameterCard">
+            <img
+              src="./assets/img/parameter.png"
+              alt=""
+              class="parameterCard__img"
+            />
+            <p>4 203</p>
+            <p>4 ЭТАЖ</p>
+            <p>
+              Офисное помещение с <br />
+              террасой
+            </p>
+            <p>
+              Площадь <br />
+              141,75м
+            </p>
+            <p>
+              Терраса <br />
+              276,70
+            </p>
+            <p>77 962 500 Р</p>
+            <div class="checkbox_cont">              
+              <input class="checkBox" type="checkbox" id="checkbox2" />
+              <label for="checkbox2"></label>
+            </div>
+          </div>
+          <div class="parameterCard">
+            <img
+              src="./assets/img/parameter.png"
+              alt=""
+              class="parameterCard__img"
+            />
+            <p>4 203</p>
+            <p>4 ЭТАЖ</p>
+            <p>
+              Офисное помещение с <br />
+              террасой
+            </p>
+            <p>
+              Площадь <br />
+              141,75м
+            </p>
+            <p>
+              Терраса <br />
+              276,70
+            </p>
+            <p>77 962 500 Р</p>
+            <div class="checkbox_cont">              
+              <input class="checkBox" type="checkbox" id="checkbox3" />
+              <label for="checkbox3"></label>
+            </div>
+          </div>
+        </div>
+        <div class="parameters__bottom"></div>
+      </div>
+    </section>
+
+    <section class="sliderSection">
+      <div class="aboutDeveloper container">
+        <div class="aboutDeveloper__left">
+          <!-- <img src="./assets/img/logodev.png" alt="" /> -->
+          <div class="aboutDeveloper__left-title">КОНТАКТЫ</div>
+          <div class="aboutDeveloper__left-contacts">
+            <div class="left_block">
+              <div class="left_subtitle_cont">
+                <div class="aboutDeveloper__left-subtitl">девелопер <br> проекта</div>
+                <img src="./assets/img/logofot.svg" alt="">
+              </div>
+              <div class="left_subtitle_cont">
+                <div class="aboutDeveloper__left-subtitl_small">партнеры проекта</div>
+                <div class="foot_consult">
+                  <div class="foot_consult_item">
+                    <img src="./assets/img/consult1.svg" alt="">
+                    <span>WeWall - Консультант по продаже офисов</span>
+                  </div>
+                  <div class="foot_consult_item foot_consult_item_2">
+                    <img src="./assets/img/consult2.png" alt="">
+                    <span>ProSpaces - Консультант по продаже ритейла</span>
+                  </div>
+                </div>
+              </div>
+              <div class="left_subtitle_cont copyright_block">
+                <div class="copyright">
+                    2022 Эйлер. Все авторские права защищены.
+                </div>
+                <div class="footerDownload">
+                  <img src="./assets/img/download_footer.png" alt="" />
+                  <a href="">Скачать проектную декларацию (pdf 2.1 мб)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="aboutDeveloper__right">
+          <div class="right_block">
+            <a href="https://yandex.com/maps/213/moscow/house/beregovoy_proyezd_1b/Z04YcwZjSkYFQFtvfXt0d3VlYA==/?ll=37.513554%2C55.756945&z=18.04" class="location"><img src="./assets/img/map_pin.svg" alt="" />Москва, Береговой проезд, дом 1В</a>
+            <a href="mailto:sale@euler.moscow"><img src="./assets/img/mail.svg" alt="" />sale@euler.moscow</a>
+            <a class="phone" href="tel:+74957652626" class="phone"><img src="./assets/img/phone.svg" alt="" />+7 (495) 765-26-26</a>
+            <a href="" class="policy"> Политика конфиденциальности </a>
+          </div>
+        </div>
+      </div>
+      </section>
+  </body>
+  <script>
+    let myNav = document.getElementById("navbar");
+    window.onscroll = function () {
+      "use strict";
+      if (
+        document.body.scrollTop >= 100 ||
+        document.documentElement.scrollTop >= 100
+      ) {
+        myNav.classList.add("nav-colored");
+        myNav.classList.remove("nav-transparent");
+      } else {
+        myNav.classList.add("nav-transparent");
+        myNav.classList.remove("nav-colored");
+      }
+    };
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script>
+  $(function(){
+  var handle = $("#custom-handle");
+  $("#slider").slider({
+    create: function() {
+      handle.find('.custom_handle_val').text($(this).slider("value"));
+      var width = parseInt(handle.css('left'));
+      handle.parent().find('.progress_line').width(width);
+    },
+    slide: function(event, ui) {
+      handle.find('.custom_handle_val').text( ui.value );
+      var width = parseInt(handle.css('left'));
+      console.log(width)
+      handle.parent().find('.progress_line').width(width);
+    }
+  });
+
+  var handle2 = $("#custom-handle2");
+  $("#slider2").slider({
+    create: function() {
+      handle2.find('.custom_handle_val').text($(this).slider("value"));
+      var width = parseInt(handle2.css('left'));
+      handle2.parent().find('.progress_line').width(width);
+    },
+    slide: function(event, ui) {
+      handle2.find('.custom_handle_val').text( ui.value );
+      var width = parseInt(handle2.css('left'));
+      console.log(width)
+      handle2.parent().find('.progress_line').width(width);
+    }
+  });
+
+  var handle3 = $("#custom-handle3");
+  $("#slider3").slider({
+    create: function() {
+      handle3.find('.custom_handle_val').text($(this).slider("value"));
+      var width = parseInt(handle3.css('left'));
+      handle3.parent().find('.progress_line').width(width);
+    },
+    slide: function(event, ui) {
+      handle3.find('.custom_handle_val').text( ui.value );
+      var width = parseInt(handle3.css('left'));
+      console.log(width)
+      handle3.parent().find('.progress_line').width(width);
+    }
+  });
+  });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.js"></script>
+  <script src="/assets/js/index.js"></script>
+</html>
